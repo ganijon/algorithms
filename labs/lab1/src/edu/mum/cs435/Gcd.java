@@ -1,9 +1,9 @@
 package edu.mum.cs435;
 
-public class Main {
+public class Gcd {
 
     public static void main(String[] args) {
-        System.out.println(gcd(9, 6));
+        System.out.println(gcd2(1, 6));
     }
 
     public static int gcd(int m, int n) {
@@ -17,5 +17,12 @@ public class Main {
         }
 
         return 0;
+    }
+
+    public static int gcd2(int x, int y) {
+        if (y == 0)
+            return x;
+        return gcd(y, x % y);
+
     }
 }
